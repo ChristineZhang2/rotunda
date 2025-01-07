@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <h1>Your Representatives</h1>
+        {% for rep in representatives %}
+            <div class="representative">
+                <h2>{{ rep.name }} ({{ rep.party }})</h2>
+                <p>Office: {{ rep.office }}</p>
+                {% if rep.photoUrl %}
+                    <img src="{{ rep.photoUrl }}" alt="{{ rep.name }}" class="rep-photo">
+                {% endif %}
+                <h3>Contact Information:</h3>
+                {% if rep.phones %}
+                    <p>Phone: {{ rep.phones[0] }}</p>
+                {% endif %}
+                {% if rep.emails %}
+                    <p>Email: {{ rep.emails[0] }}</p>
+                {% endif %}
+                {% if rep.urls %}
+                    <p>Website: <a href="{{ rep.urls[0] }}" target="_blank">{{ rep.urls[0] }}</a></p>
+                {% endif %}
+                <a href="{{ url_for('contact_rep', rep_name=rep.name) }}" class="contact-btn">Contact {{ rep.name }}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

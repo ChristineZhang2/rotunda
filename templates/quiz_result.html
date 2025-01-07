@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <h1>Your Civic Engagement Score</h1>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ score }}%;" aria-valuenow="{{ score }}" aria-valuemin="0" aria-valuemax="100">{{ score }}%</div>
+        </div>
+        <p>Your civic engagement score is {{ score }}%.</p>
+    </div>
+{% endblock %}

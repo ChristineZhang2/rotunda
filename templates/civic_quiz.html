@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <h1>Civic Engagement Quiz</h1>
+        <form action="{{ url_for('civic_quiz') }}" method="post">
+            <div class="form-group">
+                <p>1. Have you voted in the last election?</p>
+                <input type="radio" name="answer1" value="1" id="q1_yes"> <label for="q1_yes">Yes</label>
+                <input type="radio" name="answer1" value="0" id="q1_no"> <label for="q1_no">No</label>
+            </div>
+            <div class="form-group">
+                <p>2. Have you attended a town hall meeting in the past year?</p>
+                <input type="radio" name="answer2" value="1" id="q2_yes"> <label for="q2_yes">Yes</label>
+                <input type="radio" name="answer2" value="0" id="q2_no"> <label for="q2_no">No</label>
+            </div>
+            <div class="form-group">
+                <p>3. Have you volunteered for a community service project recently?</p>
+                <input type="radio" name="answer3" value="1" id="q3_yes"> <label for="q3_yes">Yes</label>
+                <input type="radio" name="answer3" value="0" id="q3_no"> <label for="q3_no">No</label>
+            </div>
+            <div class="form-group">
+                <p>4. Are you an active member of any groups or associations, such as charities, labor unions, professional associations, political or social groups, or sports organizations?</p>
+                <input type="radio" name="answer4" value="1" id="q4_yes"> <label for="q4_yes">Yes</label>
+                <input type="radio" name="answer4" value="0" id="q4_no"> <label for="q4_no">No</label>
+            </div>
+            <div class="form-group">
+                <p>5. In the past 12 months, have you contacted or visited a public official at any level of government to express your opinion?</p>
+                <input type="radio" name="answer5" value="1" id="q5_yes"> <label for="q5_yes">Yes</label>
+                <input type="radio" name="answer5" value="0" id="q5_no"> <label for="q5_no">No</label>
+            </div>
+            <div class="form-group">
+                <p>6. Have you participated in a charitable event, such as a walk, run, or bike ride for a cause in the past 12 months?</p>
+                <input type="radio" name="answer6" value="1" id="q6_yes"> <label for="q6_yes">Yes</label>
+                <input type="radio" name="answer6" value="0" id="q6_no"> <label for="q6_no">No</label>
+            </div>
+            <div class="form-group">
+                <p>7. Do you follow local news sources to stay informed about community issues?</p>
+                <input type="radio" name="answer7" value="1" id="q7_yes"> <label for="q7_yes">Yes</label>
+                <input type="radio" name="answer7" value="0" id="q7_no"> <label for="q7_no">No</label>
+            </div>
+            <div class="form-group">
+                <p>8. Have you ever participated in a peaceful protest or demonstration?</p>
+                <input type="radio" name="answer8" value="1" id="q8_yes"> <label for="q8_yes">Yes</label>
+                <input type="radio" name="answer8" value="0" id="q8_no"> <label for="q8_no">No</label>
+            </div>
+            <div class="form-group">
+                <p>9. In the past year, have you attended a school board meeting?</p>
+                <input type="radio" name="answer9" value="1" id="q9_yes"> <label for="q9_yes">Yes</label>
+                <input type="radio" name="answer9" value="0" id="q9_no"> <label for="q9_no">No</label>
+            </div>
+            <div class="form-group">
+                <p>10. Do you currently subscribe to or regularly read a local newspaper (print or digital)?</p>
+                <input type="radio" name="answer10" value="1" id="q10_yes"> <label for="q10_yes">Yes</label>
+                <input type="radio" name="answer10" value="0" id="q10_no"> <label for="q10_no">No</label>
+            </div>
+            <button type="submit" class="btn-primary">Submit Quiz</button>
+        </form>
+    </div>
+{% endblock %}
